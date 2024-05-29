@@ -6,7 +6,6 @@ from config import config
 
 DATABASE_URL = config.settings.database_url
 
-# TODO echo=True - непонятно, нужно или нет
 engine = create_engine(DATABASE_URL, echo=True)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
